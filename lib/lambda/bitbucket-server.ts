@@ -72,10 +72,37 @@ export class BitBucketAlreadyExistsError extends BitBucketError {
 
 interface BitBucketRequest {
 }
+interface BitBucketResponse {
+}
+
+interface BitBucketCreateProjectRequest extends BitBucketRequest {
+  key: string,
+  name: string,
+  description: string,
+}
+interface BitBucketCreateProjectResponse extends BitBucketResponse {
+  id: number,
+  key: string,
+  name: string,
+  description: string,
+}
+
+interface BitBucketGetProjectResponse extends BitBucketResponse {
+  id: number,
+  key: string,
+  name: string,
+  description: string,
+}
 
 interface BitBucketCreateRepoRequest extends BitBucketRequest {
   name: string,
   scmId: string,
+}
+interface BitBucketCreateRepoResponse extends BitBucketResponse {
+  slug: string,
+  id: number,
+  name: string,
+  description: string
 }
 
 interface BitBucketCreateWebHookRequest extends BitBucketRequest {
@@ -86,17 +113,6 @@ interface BitBucketCreateWebHookRequest extends BitBucketRequest {
   }
   url: string,
 }
-
-interface BitBucketResponse {
-}
-
-interface BitBucketCreateRepoResponse extends BitBucketResponse {
-  slug: string,
-  id: number,
-  name: string,
-  description: string
-}
-
 interface BitBucketCreateWebHookResponse extends BitBucketResponse {
   id: number,
   name: string,
@@ -195,6 +211,24 @@ export class BitBucketServer {
       }
       req.end();
     });
+  }
+
+  public createProject(req: BitBucketCreateProjectRequest): Promise<BitBucketCreateProjectResponse> {
+    const repoPath = `rest/api/1.0/projects`;
+
+    return this.performRequest<BitBucketCreateProjectRequest, BitBucketCreateProjectResponse>(HttpMethod.POST, repoPath, req);
+  }
+
+  public deleteProject(projectKey: string): Promise<BitBucketResponse> {
+    const repoPath = `rest/api/1.0/projects/${projectKey}`;
+
+    return this.performRequest<BitBucketRequest, BitBucketResponse>(HttpMethod.DELETE, repoPath);
+  }
+
+  public getProject(projectKey: string): Promise<BitBucketGetProjectResponse> {
+    const repoPath = `rest/api/1.0/projects/${projectKey}`;
+
+    return this.performRequest<BitBucketRequest, BitBucketGetProjectResponse>(HttpMethod.GET, repoPath);
   }
 
   public createRepository(projectKey: string, req: BitBucketCreateRepoRequest): Promise<BitBucketCreateRepoResponse> {

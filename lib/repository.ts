@@ -1,10 +1,7 @@
 import * as cdk from '@aws-cdk/core';
 
-export interface BitBucketProps {
+export interface BitBucketRepoProps {
   readonly serviceToken: string;
-}
-
-export interface BitBucketRepoProps extends BitBucketProps {
   readonly projectName: string;
   readonly repositorySlug: string;
 }

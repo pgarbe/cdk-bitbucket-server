@@ -4,7 +4,6 @@ import * as AWS from 'aws-sdk';
 
 interface HandlerReturn {
   PhysicalResourceId: string;
-  IsComplete: boolean;
   Data: {
     Id: string;
   };
@@ -51,7 +50,6 @@ const onCreate = async (
 
     return {
       PhysicalResourceId: res.id.toString(),
-      IsComplete: true,
       Data: {
         Id: res.id.toString(),
       },
@@ -65,7 +63,6 @@ const onCreate = async (
 
       return {
         PhysicalResourceId: res.id.toString(),
-        IsComplete: true,
         Data: {
           Id: res.id.toString(),
         },

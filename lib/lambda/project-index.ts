@@ -1,5 +1,5 @@
 import { CloudFormationCustomResourceEvent, CloudFormationCustomResourceCreateEvent, CloudFormationCustomResourceDeleteEvent } from 'aws-lambda';
-import { BitBucketServer, WebHookEvents } from './bitbucket-server';
+import { BitBucketServer } from './bitbucket-server';
 import * as AWS from 'aws-sdk';
 
 interface HandlerReturn {
@@ -9,24 +9,18 @@ interface HandlerReturn {
   };
 }
 
-export interface BitBucketRepositoryProps {
-  projectKey: string,
-  repositorySlug: string,
+export interface BitBucketProjectProps {
+  key: string,
   name: string,
-  url: string,
-  secret: string,
-  events: WebHookEvents[]
+  description: string,
 }
 
 const getProperties = (
   props: CloudFormationCustomResourceEvent['ResourceProperties'],
-): BitBucketRepositoryProps => ({
-  projectKey: props.ProjectKey,
-  repositorySlug: props.RepositorySlug,
+): BitBucketProjectProps => ({
+  key: props.Key,
   name: props.Name,
-  url: props.Url,
-  secret: props.Secret,
-  events: props.Events,
+  description: props.Description,
 });
 
 
@@ -44,23 +38,17 @@ const onCreate = async (
   event: CloudFormationCustomResourceCreateEvent,
 ): Promise<HandlerReturn> => {
   const {
-    projectKey,
-    repositorySlug,
+    key,
     name,
-    url,
-    secret,
-    events
+    description,
   } = getProperties(event.ResourceProperties);
 
   const bb = await getBitBucketServer();
 
-  const res = await bb.createWebHook(projectKey, repositorySlug, {
+  const res = await bb.createProject({
+    key: key,
     name: name,
-    url: url,
-    configuration: { 
-      secret: secret
-    },
-    events: events
+    description: description,
   });
 
   return {
@@ -75,12 +63,11 @@ const onDelete = async (
   event: CloudFormationCustomResourceDeleteEvent,
 ): Promise<void> => {
   const {
-    projectKey,
-    repositorySlug,
+    key: projectKey,
   } = getProperties(event.ResourceProperties);
 
   const bb = await getBitBucketServer();
-  await bb.deleteRepository(projectKey, repositorySlug);
+  await bb.deleteProject(projectKey);
 }
 
 export const handler = async (
@@ -90,8 +77,9 @@ export const handler = async (
 
   switch (requestType) {
     case 'Create':
-    case 'Update':
       return await onCreate(event as CloudFormationCustomResourceCreateEvent);
+    // case 'Update':
+    //   return await onUpdate(event as CloudFormationCustomResourceUpdateEvent);
     case 'Delete':
       return await onDelete(event as CloudFormationCustomResourceDeleteEvent);
     default:

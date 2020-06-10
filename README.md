@@ -17,9 +17,14 @@ cdk deploy --app "npx ts-node bitbucket-stack.ts"
 
 ## Supported resources
 
-[x] Repository
-[] WebHook
-[] Project
+[x] Repository  
+[x] WebHook  
+[x] Project  
+
+## Next steps
+[] Support cross account usage (see also [#8470](https://github.com/aws/aws-cdk/issues/8470) )
+[] Explicitly handle update of resources
+[] Explicitly handle delete of resources (using retention policy)
 
 ## How to release
 

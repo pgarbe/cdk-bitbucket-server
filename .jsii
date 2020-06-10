@@ -646,7 +646,7 @@
   "license": "MIT",
   "name": "@pgarbe/cdk-bitbucket-server",
   "readme": {
-    "markdown": "# CDK BitBucket Server Constructs\n\nAn CDK Construct to create repositories, webhooks and maybe more on BitBucket Server (formarly Stash). It's not working with BitBucket Cloud.\n\n![](https://github.com/pgarbe/cdk-bitbucket-server/workflows/Build/badge.svg)\n\n## How to use it\n\nSee also `examples` folder. `bitbucket-backend-stack` creates the custom resource and shares the ServiceToken as output. `bitbucket-stack` uses ServiceToken and creates new BitBucket resources.\n\nEnsure to have SSM Parameters `config/bitbucket/host`, `config/bitbucket/username` and `config/bitbucket/password`.\n\n```bash\ncdk deploy --app \"npx ts-node bitbucket-backend-stack.ts\"\ncdk deploy --app \"npx ts-node bitbucket-stack.ts\"\n```\n\n## Supported resources\n\n[x] Repository\n[] WebHook\n[] Project\n\n## How to release\n\nSet a new version with `npm version` command and push changes to GitHub.\n\n```\nnpm version x.x.x\ngit push\n```\n"
+    "markdown": "# CDK BitBucket Server Constructs\n\nAn CDK Construct to create repositories, webhooks and maybe more on BitBucket Server (formarly Stash). It's not working with BitBucket Cloud.\n\n![](https://github.com/pgarbe/cdk-bitbucket-server/workflows/Build/badge.svg)\n\n## How to use it\n\nSee also `examples` folder. `bitbucket-backend-stack` creates the custom resource and shares the ServiceToken as output. `bitbucket-stack` uses ServiceToken and creates new BitBucket resources.\n\nEnsure to have SSM Parameters `config/bitbucket/host`, `config/bitbucket/username` and `config/bitbucket/password`.\n\n```bash\ncdk deploy --app \"npx ts-node bitbucket-backend-stack.ts\"\ncdk deploy --app \"npx ts-node bitbucket-stack.ts\"\n```\n\n## Supported resources\n\n[x] Repository\n[x] WebHook\n[x] Project\n\n## Next steps\n[] Support cross account usage (see also [#8470](https://github.com/aws/aws-cdk/issues/8470) )\n[] Explicitly handle update of resources\n[] Explicitly handle delete of resources (using retention policy)\n\n## How to release\n\nSet a new version with `npm version` command and push changes to GitHub.\n\n```\nnpm version x.x.x\ngit push\n```\n"
   },
   "repository": {
     "type": "GitHub",
@@ -659,22 +659,204 @@
     }
   },
   "types": {
-    "@pgarbe/cdk-bitbucket-server.BitBucketProps": {
+    "@pgarbe/cdk-bitbucket-server.BitBucketProject": {
+      "assembly": "@pgarbe/cdk-bitbucket-server",
+      "base": "@aws-cdk/core.Construct",
+      "fqn": "@pgarbe/cdk-bitbucket-server.BitBucketProject",
+      "initializer": {
+        "parameters": [
+          {
+            "name": "scope",
+            "type": {
+              "fqn": "@aws-cdk/core.Construct"
+            }
+          },
+          {
+            "name": "id",
+            "type": {
+              "primitive": "string"
+            }
+          },
+          {
+            "name": "props",
+            "type": {
+              "fqn": "@pgarbe/cdk-bitbucket-server.BitBucketProjectProps"
+            }
+          }
+        ]
+      },
+      "kind": "class",
+      "locationInModule": {
+        "filename": "lib/project.ts",
+        "line": 10
+      },
+      "name": "BitBucketProject"
+    },
+    "@pgarbe/cdk-bitbucket-server.BitBucketProjectCustomResource": {
+      "assembly": "@pgarbe/cdk-bitbucket-server",
+      "base": "@aws-cdk/core.Construct",
+      "fqn": "@pgarbe/cdk-bitbucket-server.BitBucketProjectCustomResource",
+      "initializer": {
+        "parameters": [
+          {
+            "name": "scope",
+            "type": {
+              "fqn": "@aws-cdk/core.Construct"
+            }
+          },
+          {
+            "name": "id",
+            "type": {
+              "primitive": "string"
+            }
+          },
+          {
+            "name": "props",
+            "type": {
+              "fqn": "@pgarbe/cdk-bitbucket-server.BitBucketProjectCustomResourceProps"
+            }
+          }
+        ]
+      },
+      "interfaces": [
+        "@aws-cdk/aws-iam.IGrantable"
+      ],
+      "kind": "class",
+      "locationInModule": {
+        "filename": "lib/project-custom-resource.ts",
+        "line": 13
+      },
+      "name": "BitBucketProjectCustomResource",
+      "properties": [
+        {
+          "docs": {
+            "summary": "The principal to grant permissions to."
+          },
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/project-custom-resource.ts",
+            "line": 16
+          },
+          "name": "grantPrincipal",
+          "overrides": "@aws-cdk/aws-iam.IGrantable",
+          "type": {
+            "fqn": "@aws-cdk/aws-iam.IPrincipal"
+          }
+        },
+        {
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/project-custom-resource.ts",
+            "line": 15
+          },
+          "name": "serviceToken",
+          "type": {
+            "primitive": "string"
+          }
+        }
+      ]
+    },
+    "@pgarbe/cdk-bitbucket-server.BitBucketProjectCustomResourceProps": {
       "assembly": "@pgarbe/cdk-bitbucket-server",
       "datatype": true,
-      "fqn": "@pgarbe/cdk-bitbucket-server.BitBucketProps",
+      "fqn": "@pgarbe/cdk-bitbucket-server.BitBucketProjectCustomResourceProps",
       "kind": "interface",
       "locationInModule": {
-        "filename": "lib/repository.ts",
-        "line": 3
+        "filename": "lib/project-custom-resource.ts",
+        "line": 7
       },
-      "name": "BitBucketProps",
+      "name": "BitBucketProjectCustomResourceProps",
       "properties": [
         {
           "abstract": true,
           "immutable": true,
           "locationInModule": {
-            "filename": "lib/repository.ts",
+            "filename": "lib/project-custom-resource.ts",
+            "line": 8
+          },
+          "name": "host",
+          "type": {
+            "primitive": "string"
+          }
+        },
+        {
+          "abstract": true,
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/project-custom-resource.ts",
+            "line": 10
+          },
+          "name": "passwordSsmPath",
+          "type": {
+            "primitive": "string"
+          }
+        },
+        {
+          "abstract": true,
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/project-custom-resource.ts",
+            "line": 9
+          },
+          "name": "usernameSsmPath",
+          "type": {
+            "primitive": "string"
+          }
+        }
+      ]
+    },
+    "@pgarbe/cdk-bitbucket-server.BitBucketProjectProps": {
+      "assembly": "@pgarbe/cdk-bitbucket-server",
+      "datatype": true,
+      "fqn": "@pgarbe/cdk-bitbucket-server.BitBucketProjectProps",
+      "kind": "interface",
+      "locationInModule": {
+        "filename": "lib/project.ts",
+        "line": 3
+      },
+      "name": "BitBucketProjectProps",
+      "properties": [
+        {
+          "abstract": true,
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/project.ts",
+            "line": 7
+          },
+          "name": "description",
+          "type": {
+            "primitive": "string"
+          }
+        },
+        {
+          "abstract": true,
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/project.ts",
+            "line": 6
+          },
+          "name": "name",
+          "type": {
+            "primitive": "string"
+          }
+        },
+        {
+          "abstract": true,
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/project.ts",
+            "line": 5
+          },
+          "name": "projectKey",
+          "type": {
+            "primitive": "string"
+          }
+        },
+        {
+          "abstract": true,
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/project.ts",
             "line": 4
           },
           "name": "serviceToken",
@@ -713,7 +895,7 @@
       "kind": "class",
       "locationInModule": {
         "filename": "lib/repository.ts",
-        "line": 12
+        "line": 9
       },
       "name": "BitBucketRepo"
     },
@@ -834,13 +1016,10 @@
       "assembly": "@pgarbe/cdk-bitbucket-server",
       "datatype": true,
       "fqn": "@pgarbe/cdk-bitbucket-server.BitBucketRepoProps",
-      "interfaces": [
-        "@pgarbe/cdk-bitbucket-server.BitBucketProps"
-      ],
       "kind": "interface",
       "locationInModule": {
         "filename": "lib/repository.ts",
-        "line": 7
+        "line": 3
       },
       "name": "BitBucketRepoProps",
       "properties": [
@@ -849,7 +1028,7 @@
           "immutable": true,
           "locationInModule": {
             "filename": "lib/repository.ts",
-            "line": 8
+            "line": 5
           },
           "name": "projectName",
           "type": {
@@ -861,9 +1040,245 @@
           "immutable": true,
           "locationInModule": {
             "filename": "lib/repository.ts",
-            "line": 9
+            "line": 6
           },
           "name": "repositorySlug",
+          "type": {
+            "primitive": "string"
+          }
+        },
+        {
+          "abstract": true,
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/repository.ts",
+            "line": 4
+          },
+          "name": "serviceToken",
+          "type": {
+            "primitive": "string"
+          }
+        }
+      ]
+    },
+    "@pgarbe/cdk-bitbucket-server.BitBucketWebHook": {
+      "assembly": "@pgarbe/cdk-bitbucket-server",
+      "base": "@aws-cdk/core.Construct",
+      "fqn": "@pgarbe/cdk-bitbucket-server.BitBucketWebHook",
+      "initializer": {
+        "parameters": [
+          {
+            "name": "scope",
+            "type": {
+              "fqn": "@aws-cdk/core.Construct"
+            }
+          },
+          {
+            "name": "id",
+            "type": {
+              "primitive": "string"
+            }
+          },
+          {
+            "name": "props",
+            "type": {
+              "fqn": "@pgarbe/cdk-bitbucket-server.BitBucketWebHookProps"
+            }
+          }
+        ]
+      },
+      "kind": "class",
+      "locationInModule": {
+        "filename": "lib/webhook.ts",
+        "line": 11
+      },
+      "name": "BitBucketWebHook"
+    },
+    "@pgarbe/cdk-bitbucket-server.BitBucketWebHookCustomResource": {
+      "assembly": "@pgarbe/cdk-bitbucket-server",
+      "base": "@aws-cdk/core.Construct",
+      "fqn": "@pgarbe/cdk-bitbucket-server.BitBucketWebHookCustomResource",
+      "initializer": {
+        "parameters": [
+          {
+            "name": "scope",
+            "type": {
+              "fqn": "@aws-cdk/core.Construct"
+            }
+          },
+          {
+            "name": "id",
+            "type": {
+              "primitive": "string"
+            }
+          },
+          {
+            "name": "props",
+            "type": {
+              "fqn": "@pgarbe/cdk-bitbucket-server.BitBucketWebHookCustomResourceProps"
+            }
+          }
+        ]
+      },
+      "interfaces": [
+        "@aws-cdk/aws-iam.IGrantable"
+      ],
+      "kind": "class",
+      "locationInModule": {
+        "filename": "lib/webhook-custom-resource.ts",
+        "line": 13
+      },
+      "name": "BitBucketWebHookCustomResource",
+      "properties": [
+        {
+          "docs": {
+            "summary": "The principal to grant permissions to."
+          },
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/webhook-custom-resource.ts",
+            "line": 16
+          },
+          "name": "grantPrincipal",
+          "overrides": "@aws-cdk/aws-iam.IGrantable",
+          "type": {
+            "fqn": "@aws-cdk/aws-iam.IPrincipal"
+          }
+        },
+        {
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/webhook-custom-resource.ts",
+            "line": 15
+          },
+          "name": "serviceToken",
+          "type": {
+            "primitive": "string"
+          }
+        }
+      ]
+    },
+    "@pgarbe/cdk-bitbucket-server.BitBucketWebHookCustomResourceProps": {
+      "assembly": "@pgarbe/cdk-bitbucket-server",
+      "datatype": true,
+      "fqn": "@pgarbe/cdk-bitbucket-server.BitBucketWebHookCustomResourceProps",
+      "kind": "interface",
+      "locationInModule": {
+        "filename": "lib/webhook-custom-resource.ts",
+        "line": 7
+      },
+      "name": "BitBucketWebHookCustomResourceProps",
+      "properties": [
+        {
+          "abstract": true,
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/webhook-custom-resource.ts",
+            "line": 8
+          },
+          "name": "host",
+          "type": {
+            "primitive": "string"
+          }
+        },
+        {
+          "abstract": true,
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/webhook-custom-resource.ts",
+            "line": 10
+          },
+          "name": "passwordSsmPath",
+          "type": {
+            "primitive": "string"
+          }
+        },
+        {
+          "abstract": true,
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/webhook-custom-resource.ts",
+            "line": 9
+          },
+          "name": "usernameSsmPath",
+          "type": {
+            "primitive": "string"
+          }
+        }
+      ]
+    },
+    "@pgarbe/cdk-bitbucket-server.BitBucketWebHookProps": {
+      "assembly": "@pgarbe/cdk-bitbucket-server",
+      "datatype": true,
+      "fqn": "@pgarbe/cdk-bitbucket-server.BitBucketWebHookProps",
+      "kind": "interface",
+      "locationInModule": {
+        "filename": "lib/webhook.ts",
+        "line": 3
+      },
+      "name": "BitBucketWebHookProps",
+      "properties": [
+        {
+          "abstract": true,
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/webhook.ts",
+            "line": 8
+          },
+          "name": "events",
+          "type": {
+            "collection": {
+              "elementtype": {
+                "primitive": "string"
+              },
+              "kind": "array"
+            }
+          }
+        },
+        {
+          "abstract": true,
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/webhook.ts",
+            "line": 5
+          },
+          "name": "name",
+          "type": {
+            "primitive": "string"
+          }
+        },
+        {
+          "abstract": true,
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/webhook.ts",
+            "line": 7
+          },
+          "name": "secret",
+          "type": {
+            "primitive": "string"
+          }
+        },
+        {
+          "abstract": true,
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/webhook.ts",
+            "line": 4
+          },
+          "name": "serviceToken",
+          "type": {
+            "primitive": "string"
+          }
+        },
+        {
+          "abstract": true,
+          "immutable": true,
+          "locationInModule": {
+            "filename": "lib/webhook.ts",
+            "line": 6
+          },
+          "name": "url",
           "type": {
             "primitive": "string"
           }
@@ -872,5 +1287,5 @@
     }
   },
   "version": "0.1.0",
-  "fingerprint": "uhtk2qfTKG8EujqaWNXnRJwOoluebzoDwFZpk0Cekys="
+  "fingerprint": "WLpsMBk85ks4Tgo/2tuoKLdhAmT2nrYDUo6xwvEcI6Y="
 }
