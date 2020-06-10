@@ -7,12 +7,13 @@
     "url": "https://garbe.io"
   },
   "dependencies": {
-    "@aws-cdk/aws-iam": "^1.44.0",
-    "@aws-cdk/aws-lambda": "^1.44.0",
-    "@aws-cdk/aws-lambda-nodejs": "^1.44.0",
-    "@aws-cdk/aws-secretsmanager": "^1.44.0",
-    "@aws-cdk/core": "1.44.0",
-    "@aws-cdk/custom-resources": "^1.44.0",
+    "@aws-cdk/aws-iam": "^1.45.0",
+    "@aws-cdk/aws-lambda": "^1.45.0",
+    "@aws-cdk/aws-lambda-nodejs": "^1.45.0",
+    "@aws-cdk/aws-secretsmanager": "^1.45.0",
+    "@aws-cdk/aws-sns-subscriptions": "^1.45.0",
+    "@aws-cdk/core": "1.45.0",
+    "@aws-cdk/custom-resources": "^1.45.0",
     "constructs": "^3.0.3"
   },
   "dependencyClosure": {
@@ -391,6 +392,31 @@
         }
       }
     },
+    "@aws-cdk/aws-sns-subscriptions": {
+      "targets": {
+        "dotnet": {
+          "assemblyOriginatorKeyFile": "../../key.snk",
+          "iconUrl": "https://raw.githubusercontent.com/aws/aws-cdk/master/logo/default-256-dark.png",
+          "namespace": "Amazon.CDK.AWS.SNS.Subscriptions",
+          "packageId": "Amazon.CDK.AWS.SNS.Subscriptions",
+          "signAssembly": true
+        },
+        "java": {
+          "maven": {
+            "artifactId": "sns-subscriptions",
+            "groupId": "software.amazon.awscdk"
+          },
+          "package": "software.amazon.awscdk.services.sns.subscriptions"
+        },
+        "js": {
+          "npm": "@aws-cdk/aws-sns-subscriptions"
+        },
+        "python": {
+          "distName": "aws-cdk.aws-sns-subscriptions",
+          "module": "aws_cdk.aws_sns_subscriptions"
+        }
+      }
+    },
     "@aws-cdk/aws-sqs": {
       "targets": {
         "dotnet": {
@@ -614,7 +640,7 @@
       }
     }
   },
-  "description": "An CDK Construct to work with BitBucket Server (Stash)",
+  "description": "A CDK Construct library to work with BitBucket Server (Stash)",
   "homepage": "https://github.com/pgarbe/cdk-bitbucket-server",
   "jsiiVersion": "1.6.0 (build 248e75b)",
   "license": "MIT",
@@ -846,5 +872,5 @@
     }
   },
   "version": "0.1.0",
-  "fingerprint": "oCICdnCVkIQE00AgFI/S9ZKtxlBi3DHNRwZxB96XS84="
+  "fingerprint": "uhtk2qfTKG8EujqaWNXnRJwOoluebzoDwFZpk0Cekys="
 }

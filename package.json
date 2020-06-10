@@ -28,11 +28,11 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@aws-cdk/assert": "1.44.0",
-    "@types/aws-lambda": "^8.10.53",
-    "@types/jest": "^25.2.3",
-    "@types/node": "14.0.12",
-    "aws-cdk": "1.44.0",
+    "@aws-cdk/assert": "1.45.0",
+    "@types/aws-lambda": "^8.10.55",
+    "@types/jest": "^26.0.0",
+    "@types/node": "14.0.13",
+    "aws-cdk": "1.45.0",
     "aws-sdk": "^2.693.0",
     "jest": "^26.0.1",
     "jest-runner-groups": "^2.0.1",
@@ -45,20 +45,22 @@
     "typescript": "~3.9.5"
   },
   "dependencies": {
-    "@aws-cdk/aws-lambda": "^1.44.0",
-    "@aws-cdk/aws-lambda-nodejs": "^1.44.0",
-    "@aws-cdk/aws-secretsmanager": "^1.44.0",
-    "@aws-cdk/core": "1.44.0",
-    "@aws-cdk/custom-resources": "^1.44.0",
+    "@aws-cdk/aws-lambda": "^1.45.0",
+    "@aws-cdk/aws-lambda-nodejs": "^1.45.0",
+    "@aws-cdk/aws-secretsmanager": "^1.45.0",
+    "@aws-cdk/aws-sns-subscriptions": "^1.45.0",
+    "@aws-cdk/core": "1.45.0",
+    "@aws-cdk/custom-resources": "^1.45.0",
     "constructs": "^3.0.3"
   },
   "peerDependencies": {
     "constructs": "^3.0.3",
-    "@aws-cdk/aws-iam": "^1.44.0",
-    "@aws-cdk/aws-lambda": "^1.44.0",
-    "@aws-cdk/aws-lambda-nodejs": "^1.44.0",
-    "@aws-cdk/core": "1.44.0",
-    "@aws-cdk/custom-resources": "^1.44.0",
-    "@aws-cdk/aws-secretsmanager": "^1.44.0"
+    "@aws-cdk/aws-iam": "^1.45.0",
+    "@aws-cdk/aws-lambda": "^1.45.0",
+    "@aws-cdk/aws-lambda-nodejs": "^1.45.0",
+    "@aws-cdk/core": "1.45.0",
+    "@aws-cdk/custom-resources": "^1.45.0",
+    "@aws-cdk/aws-secretsmanager": "^1.45.0",
+    "@aws-cdk/aws-sns-subscriptions": "^1.45.0"
   }
 }
