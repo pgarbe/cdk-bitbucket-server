@@ -7,7 +7,8 @@
   "scripts": {
     "build": "jsii",
     "watch": "jsii -w",
-    "test": "jest",
+    "test": "jest --group=unit",
+    "integ": "jest --group=integ",
     "cdk": "cdk",
     "package": "jsii-pacmak"
   },
@@ -27,19 +28,21 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "aws-sdk": "^2.693.0",
     "@aws-cdk/assert": "1.44.0",
     "@types/aws-lambda": "^8.10.53",
     "@types/jest": "^25.2.3",
     "@types/node": "14.0.12",
     "aws-cdk": "1.44.0",
+    "aws-sdk": "^2.693.0",
     "jest": "^26.0.1",
+    "jest-runner-groups": "^2.0.1",
     "jsii": "^1.6.0",
     "jsii-pacmak": "^1.6.0",
+    "pre-commit": "^1.2.2",
+    "source-map-support": "^0.5.19",
     "ts-jest": "^26.1.0",
     "ts-node": "^8.10.2",
-    "typescript": "~3.9.5",
-    "source-map-support": "^0.5.19"
+    "typescript": "~3.9.5"
   },
   "dependencies": {
     "@aws-cdk/aws-lambda": "^1.44.0",

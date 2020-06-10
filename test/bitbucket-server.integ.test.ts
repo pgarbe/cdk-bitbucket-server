@@ -1,3 +1,8 @@
+/**
+ * Integration tests
+ * 
+ * @group integ
+ */
 import { BitBucketServer, BitBucketAlreadyExistsError, WebHookEvents } from '../lib/lambda/bitbucket-server';
 
 

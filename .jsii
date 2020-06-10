@@ -620,7 +620,7 @@
   "license": "MIT",
   "name": "@pgarbe/cdk-bitbucket-server",
   "readme": {
-    "markdown": "# CDK BitBucket Server Constructs\n\nAn CDK Construct to create repositories, webhooks and maybe more on BitBucket Server (formarly Stash). It's not working with BitBucket Cloud.\n\n![](https://github.com/pgarbe/cdk-bitbucket-server/workflows/Build/badge.svg)\n\n## How to use it\n\n```typescript\ntbd\n```\n\nSee also `examples` folder.\n\n```bash\ncdk deploy --app \"npx ts-node bitbucket-backend-stack.ts\"\n```\n\n## How to release\n\nSet a new version with `npm version` command and push changes to GitHub.\n\n```\nnpm version x.x.x\ngit push\n```\n"
+    "markdown": "# CDK BitBucket Server Constructs\n\nAn CDK Construct to create repositories, webhooks and maybe more on BitBucket Server (formarly Stash). It's not working with BitBucket Cloud.\n\n![](https://github.com/pgarbe/cdk-bitbucket-server/workflows/Build/badge.svg)\n\n## How to use it\n\nSee also `examples` folder. `bitbucket-backend-stack` creates the custom resource and shares the ServiceToken as output. `bitbucket-stack` uses ServiceToken and creates new BitBucket resources.\n\nEnsure to have SSM Parameters `config/bitbucket/host`, `config/bitbucket/username` and `config/bitbucket/password`.\n\n```bash\ncdk deploy --app \"npx ts-node bitbucket-backend-stack.ts\"\ncdk deploy --app \"npx ts-node bitbucket-stack.ts\"\n```\n\n## Supported resources\n\n[x] Repository\n[] WebHook\n[] Project\n\n## How to release\n\nSet a new version with `npm version` command and push changes to GitHub.\n\n```\nnpm version x.x.x\ngit push\n```\n"
   },
   "repository": {
     "type": "GitHub",
@@ -846,5 +846,5 @@
     }
   },
   "version": "0.1.0",
-  "fingerprint": "ZdoWfZLqKhBXmK8fXpEVbl2ehC15YAnTUiC9JYiAgjQ="
+  "fingerprint": "oCICdnCVkIQE00AgFI/S9ZKtxlBi3DHNRwZxB96XS84="
 }
