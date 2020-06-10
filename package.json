@@ -1,7 +1,7 @@
 {
   "name": "@pgarbe/cdk-bitbucket-server",
   "version": "0.1.0",
-  "description": "An CDK Construct to work with BitBucket Server (Stash)",
+  "description": "A CDK Construct library to work with BitBucket Server (Stash)",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
