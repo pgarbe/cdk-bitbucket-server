@@ -1,0 +1,61 @@
+{
+  "name": "@pgarbe/cdk-bitbucket-server",
+  "version": "0.1.0",
+  "description": "An CDK Construct to work with BitBucket Server (Stash)",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "jsii",
+    "watch": "jsii -w",
+    "test": "jest",
+    "cdk": "cdk",
+    "package": "jsii-pacmak"
+  },
+  "jsii": {
+    "outdir": "dist"
+  },
+  "author": {
+    "name": "Philipp Garbe",
+    "url": "https://garbe.io"
+  },
+  "awscdkio": {
+    "twitter": "pgarbe"
+  },
+  "repository": {
+    "type": "GitHub",
+    "url": "https://github.com/pgarbe/cdk-bitbucket-server"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "aws-sdk": "^2.693.0",
+    "@aws-cdk/assert": "1.44.0",
+    "@types/aws-lambda": "^8.10.53",
+    "@types/jest": "^25.2.3",
+    "@types/node": "14.0.12",
+    "aws-cdk": "1.44.0",
+    "jest": "^26.0.1",
+    "jsii": "^1.6.0",
+    "jsii-pacmak": "^1.6.0",
+    "ts-jest": "^26.1.0",
+    "ts-node": "^8.10.2",
+    "typescript": "~3.9.5",
+    "source-map-support": "^0.5.19"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-lambda": "^1.44.0",
+    "@aws-cdk/aws-lambda-nodejs": "^1.44.0",
+    "@aws-cdk/aws-secretsmanager": "^1.44.0",
+    "@aws-cdk/core": "1.44.0",
+    "@aws-cdk/custom-resources": "^1.44.0",
+    "constructs": "^3.0.3"
+  },
+  "peerDependencies": {
+    "constructs": "^3.0.3",
+    "@aws-cdk/aws-iam": "^1.44.0",
+    "@aws-cdk/aws-lambda": "^1.44.0",
+    "@aws-cdk/aws-lambda-nodejs": "^1.44.0",
+    "@aws-cdk/core": "1.44.0",
+    "@aws-cdk/custom-resources": "^1.44.0",
+    "@aws-cdk/aws-secretsmanager": "^1.44.0"
+  }
+}
