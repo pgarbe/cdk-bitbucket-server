@@ -4,15 +4,36 @@ import * as iam from '@aws-cdk/aws-iam';
 import * as cr from '@aws-cdk/custom-resources'
 import path = require('path');
 
+/**
+ * Props of BitBucketProjectCustomResource
+ */
 export interface BitBucketProjectCustomResourceProps {
+  /**
+   * BitBucket server
+   */
   readonly host: string,
+  /**
+   * Path of SSM param that includes the BitBucket username.
+   */
   readonly usernameSsmPath: string,
+  /**
+   * Path of SSM param that includes the BitBucket password.
+   */
   readonly passwordSsmPath: string,
 }
 
+/**
+ * Custom Resource provider to create a BitBucket project.
+ */
 export class BitBucketProjectCustomResource extends cdk.Construct implements iam.IGrantable {
 
+  /**
+   * The service token to be used in custom resources.
+   */
   readonly serviceToken: string;
+  /**
+   * The principal to grant permissions to
+   */
   readonly grantPrincipal: iam.IPrincipal;
 
   constructor(scope: cdk.Construct, id: string, props: BitBucketProjectCustomResourceProps) {
