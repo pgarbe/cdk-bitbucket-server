@@ -1,5 +1,5 @@
 import * as cdk from '@aws-cdk/core';
-import { BitBucketRepo } from '../lib';
+import { BitBucketRepo } from '../src';
 
 export class BitBucketStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {

@@ -26,17 +26,16 @@ export interface BitBucketProjectProps {
  * BitBucket project using {@link project-custom-resource#BitBucketProjectCustomResource | BitBucketProjectCustomResource}
  */
 export class BitBucketProject extends cdk.Construct {
-
   constructor(scope: cdk.Construct, id: string, props: BitBucketProjectProps) {
     super(scope, id);
 
-    new cdk.CustomResource(this, `${id}-cr`, { 
-      serviceToken: props.serviceToken,  
+    new cdk.CustomResource(this, `${id}-cr`, {
+      serviceToken: props.serviceToken,
       properties: {
         Key: props.key,
         Name: props.name,
         Description: props.description,
-      }
+      },
     });
   }
 }
