@@ -14,7 +14,7 @@
     "no-changes": "(git log --oneline -1 | grep -q \"chore(release):\") && echo \"No changes to release.\"",
     "bump": "yarn --silent no-changes || standard-version",
     "release": "yarn --silent no-changes || (yarn bump && git push --follow-tags origin master)",
-    "projen:upgrade": "chmod +w package.json && yarn upgrade -L projen && chmod -w package.json && yarn projen",
+    "projen:upgrade": "yarn upgrade -L projen && CI=\"\" yarn projen",
     "package": "jsii-pacmak",
     "compile": "jsii --silence-warnings=reserved-word --no-fix-peer-dependencies && jsii-docgen",
     "watch": "jsii -w --silence-warnings=reserved-word --no-fix-peer-dependencies",
@@ -51,7 +51,7 @@
     "json-schema": "^0.2.5",
     "parcel": "2.0.0-beta.1",
     "pre-commit": "^1.2.2",
-    "projen": "^0.3.51",
+    "projen": "^0.3.58",
     "standard-version": "^9.0.0",
     "ts-jest": "^26.1.0",
     "typescript": "^3.9.5"
