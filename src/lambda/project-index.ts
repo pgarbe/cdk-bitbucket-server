@@ -4,8 +4,8 @@ import {
   CloudFormationCustomResourceDeleteEvent,
 // eslint-disable-next-line import/no-unresolved
 } from 'aws-lambda';
-import { BitBucketServer } from './bitbucket-server';
 import * as AWS from 'aws-sdk';
+import { BitBucketServer } from './bitbucket-server';
 
 interface HandlerReturn {
   PhysicalResourceId: string;
@@ -76,11 +76,11 @@ export const handler = async (event: CloudFormationCustomResourceEvent): Promise
 
   switch (requestType) {
     case 'Create':
-      return await onCreate(event as CloudFormationCustomResourceCreateEvent);
+      return onCreate(event as CloudFormationCustomResourceCreateEvent);
     // case 'Update':
     //   return await onUpdate(event as CloudFormationCustomResourceUpdateEvent);
     case 'Delete':
-      return await onDelete(event as CloudFormationCustomResourceDeleteEvent);
+      return onDelete(event as CloudFormationCustomResourceDeleteEvent);
     default:
       throw new Error(`Invalid request type: ${requestType}`);
   }

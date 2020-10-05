@@ -1,8 +1,8 @@
-const { ConstructLibraryAws, Semver } = require('projen');
+const { AwsCdkConstructLibrary, Semver } = require('projen');
 
-const LAST_AWSCDK_VERSION = '1.61.1';
+const LAST_AWSCDK_VERSION = '1.65.0';
 
-const project = new ConstructLibraryAws({
+const project = new AwsCdkConstructLibrary({
   name: '@pgarbe/cdk-bitbucket-server',
   description: 'A CDK Construct library to work with BitBucket Server (Stash)',
   jsiiVersion: Semver.caret('1.12.0'),

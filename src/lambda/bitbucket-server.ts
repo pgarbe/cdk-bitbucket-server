@@ -1,6 +1,6 @@
+import { IncomingMessage } from 'http';
 import { request } from 'https';
 import { URL } from 'url';
-import { IncomingMessage } from 'http';
 
 export enum WebHookEvents {
   REPO_PUSH = 'repo:refs_changed',

@@ -1,8 +1,8 @@
-import * as cdk from '@aws-cdk/core';
-import * as lambda from '@aws-cdk/aws-lambda';
-import * as iam from '@aws-cdk/aws-iam';
-import * as cr from '@aws-cdk/custom-resources';
 import * as path from 'path';
+import * as iam from '@aws-cdk/aws-iam';
+import * as lambda from '@aws-cdk/aws-lambda';
+import * as cdk from '@aws-cdk/core';
+import * as cr from '@aws-cdk/custom-resources';
 
 /**
  * Props of BitBucketWebHookCustomResource
