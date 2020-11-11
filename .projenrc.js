@@ -39,15 +39,15 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/core',
     '@aws-cdk/custom-resources',
   ],
-  devDependencies: {
-    '@types/aws-lambda': Semver.caret('8.10.59'),
-    'parcel': Semver.pinned('2.0.0-beta.1'),
-    'pre-commit': Semver.caret('1.2.2')
-  },
-  dependencies: {
-    'aws-sdk': Semver.caret('2.708.0'),
-  },
-  bundledDependencies: [
+  devDeps: [
+    '@types/aws-lambda',
+    'parcel',
+    'pre-commit'
+  ],
+  deps: [
+    'aws-sdk',
+  ],
+  bundledDeps: [
     'aws-sdk',
   ]
 
@@ -64,7 +64,6 @@ const project = new AwsCdkConstructLibrary({
   // }
 });
 
-project.jest.config.time
 project.gitignore.exclude('.parcel-cache');
 project.gitignore.exclude('cdk.out');
 project.npmignore.exclude('examples');
