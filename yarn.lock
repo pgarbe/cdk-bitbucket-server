@@ -2879,10 +2879,10 @@ available-typed-arrays@^1.0.0, available-typed-arrays@^1.0.2:
   dependencies:
     array-filter "^1.0.0"
 
-aws-sdk@^2.790.0:
-  version "2.790.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.790.0.tgz#0c01634e59ff2a761e889808bee26dfd1ea28a2d"
-  integrity sha512-L278KsE+g/LsXIjLhpdtbvMcEZzZ/5dTBLIh6VIcNF0z63xlnDJQ4IWTDZ3Op5fK9B6vwQxlPT7XD5+egu+qoA==
+aws-sdk@^2.791.0:
+  version "2.791.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.791.0.tgz#a85bedd46c97e0d262edb055651075c3171a171c"
+  integrity sha512-oIWu0hLKmDS+rOmjud2Z1CaDXtmxKSJF4937dSNLf/vNkxxjJA/6HapSfKqsraLnekI9DLP8uop5HnCHC++Abw==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
@@ -6693,10 +6693,10 @@ jsii-diff@^1.14.1:
     typescript "~3.9.7"
     yargs "^16.1.0"
 
-jsii-docgen@^1.4.86:
-  version "1.4.86"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-1.4.86.tgz#16ca322a4dce0d28b68879b7905cf883b3e818ab"
-  integrity sha512-KSOlTh/A6XTsOY720ue3jk0lAlv7nIQVqqzxIZkz21ya+U+NqIwGat/3rFdhW1I8XCCcXiVpa2BgJ3OKOFrNLA==
+jsii-docgen@^1.4.87:
+  version "1.4.87"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-1.4.87.tgz#a13421fa74d98ccdbccbcc489e69a4a873297d6b"
+  integrity sha512-GUo7aNsEaC+5NtDR4smpVjLy0x2BdWtW0wfYossudu/bEcNV+ybsb3iJGM8N48MBYnilESKRBa6szx7niA9Hww==
   dependencies:
     "@jsii/spec" "^1.9.0"
     fs-extra "^9.0.0"
@@ -8490,10 +8490,10 @@ progress@^2.0.0:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.3.166:
-  version "0.3.166"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.3.166.tgz#62b5445c64732aa38ee38304e2570063a463c3d6"
-  integrity sha512-BgP3hqaHmwVmyimzlCRbV6Up7SyxAPNyP7q74OOcqa9NGyMjVriqaKXUnHZ7APXg0Kw8z9UHUnEnHkzlD/IYRA==
+projen@^0.3.167:
+  version "0.3.167"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.3.167.tgz#b2e76466e4bd1bb4bbe4fdf7aa0afc6c63be5cd9"
+  integrity sha512-ksjGLU/0dbhKmQWt93nrdzEX0tHpjvo6gkH0Wf2KtIStVpSAdY2Z2OIbFdigWifpNiRW0ALq0bj/+rgtrvtwUA==
   dependencies:
     "@iarna/toml" "^2.2.5"
     chalk "^4.1.0"
