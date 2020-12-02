@@ -1,6 +1,6 @@
 const { AwsCdkConstructLibrary, Semver } = require('projen');
 
-const LAST_AWSCDK_VERSION = '1.65.0';
+const LAST_AWSCDK_VERSION = '1.75.0';
 
 const project = new AwsCdkConstructLibrary({
   name: '@pgarbe/cdk-bitbucket-server',
@@ -16,13 +16,13 @@ const project = new AwsCdkConstructLibrary({
     'aws',
     'pgarbe',
     'bitbucket',
-    'bitbucket server'
+    'bitbucket server',
   ],
   license: 'MIT',
   releaseEveryCommit: false,
 
   catalog: {
-    twitter: 'pgarbe'
+    twitter: 'pgarbe',
   },
 
   // creates PRs for projen upgrades
@@ -42,14 +42,14 @@ const project = new AwsCdkConstructLibrary({
   devDeps: [
     '@types/aws-lambda',
     'parcel',
-    'pre-commit'
+    'pre-commit',
   ],
   deps: [
     'aws-sdk',
   ],
   bundledDeps: [
     'aws-sdk',
-  ]
+  ],
 
   // jsii publishing
 
