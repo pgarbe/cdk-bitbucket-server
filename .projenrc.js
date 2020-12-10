@@ -1,11 +1,10 @@
-const { AwsCdkConstructLibrary, Semver } = require('projen');
+const { AwsCdkConstructLibrary } = require('projen');
 
-const LAST_AWSCDK_VERSION = '1.75.0';
+const LAST_AWSCDK_VERSION = '1.77.0';
 
 const project = new AwsCdkConstructLibrary({
   name: '@pgarbe/cdk-bitbucket-server',
   description: 'A CDK Construct library to work with BitBucket Server (Stash)',
-  jsiiVersion: Semver.caret('1.12.0'),
   authorName: 'Philipp Garbe',
   authorUrl: 'https://garbe.io',
   repository: 'https://github.com/pgarbe/cdk-bitbucket-server.git',
@@ -41,7 +40,7 @@ const project = new AwsCdkConstructLibrary({
   ],
   devDeps: [
     '@types/aws-lambda',
-    'parcel',
+    'esbuild',
     'pre-commit',
   ],
   deps: [
@@ -64,7 +63,6 @@ const project = new AwsCdkConstructLibrary({
   // }
 });
 
-project.gitignore.exclude('.parcel-cache');
 project.gitignore.exclude('cdk.out');
 project.npmignore.exclude('examples');
 project.synth();
