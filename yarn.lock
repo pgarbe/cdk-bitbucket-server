@@ -1307,9 +1307,9 @@ available-typed-arrays@^1.0.2:
     array-filter "^1.0.0"
 
 aws-sdk@^2.807.0:
-  version "2.807.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.807.0.tgz#0040b14dd590c30b3f8b05ae87fe9cbcf3020512"
-  integrity sha512-C8eJlA/Sqwowbz4NupphwS5xFbaGkBCJetHzu+VjtmTPfg2AMpfh0Uqp5hG9qiiC1UjVlqlut99l5W9ZBGGj/w==
+  version "2.810.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.810.0.tgz#67b11eb7ac6bb967c5fbbdba523872d45cfa52db"
+  integrity sha512-+Sj+Ec00t675/0Kjisk4GIZGs7olsbu4//b5WrwPriYTV/xqJnXCPMpj3EZEV1z5Vx3PZD6dA6PTU4VZPPVcBw==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
