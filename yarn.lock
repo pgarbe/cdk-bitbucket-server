@@ -889,9 +889,9 @@
     "@sinonjs/commons" "^1.7.0"
 
 "@types/aws-lambda@^8.10.65":
-  version "8.10.65"
-  resolved "https://registry.yarnpkg.com/@types/aws-lambda/-/aws-lambda-8.10.65.tgz#fdd1f960a536d5a95c842258a7bb032aa0fbb9b6"
-  integrity sha512-JgRpDnvQFrGIO6zckdT9+8FvkPqiaI6JzL2erZtsbQVvWuQiQgaUiOXxFxRqOvSuG9MBGQ08GWkj0G3j81Kzdg==
+  version "8.10.69"
+  resolved "https://registry.yarnpkg.com/@types/aws-lambda/-/aws-lambda-8.10.69.tgz#e0533a89c96ecb6e3238c90bb91e7513b1f41c51"
+  integrity sha512-m/DHEEqXGtgT6NoGNGfgU9NrX5nG9Vs2xKhfC0AWKNj6qHsLUltPNdRKpXNQsB472Qcd5BuJMzaRF8GPRDLfUA==
 
 "@types/babel__core@^7.0.0", "@types/babel__core@^7.1.7":
   version "7.1.12"
