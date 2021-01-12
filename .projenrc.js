@@ -1,6 +1,6 @@
 const { AwsCdkConstructLibrary } = require('projen');
 
-const LAST_AWSCDK_VERSION = '1.77.0';
+const LAST_AWSCDK_VERSION = '1.83.0';
 
 const project = new AwsCdkConstructLibrary({
   name: '@pgarbe/cdk-bitbucket-server',
@@ -8,15 +8,7 @@ const project = new AwsCdkConstructLibrary({
   authorName: 'Philipp Garbe',
   authorUrl: 'https://garbe.io',
   repository: 'https://github.com/pgarbe/cdk-bitbucket-server.git',
-  keywords: [
-    'cdk',
-    'aws-cdk',
-    'construct',
-    'aws',
-    'pgarbe',
-    'bitbucket',
-    'bitbucket server',
-  ],
+  keywords: ['cdk', 'aws-cdk', 'construct', 'aws', 'pgarbe', 'bitbucket', 'bitbucket server'],
   license: 'MIT',
   releaseEveryCommit: false,
 
@@ -38,17 +30,9 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/core',
     '@aws-cdk/custom-resources',
   ],
-  devDeps: [
-    '@types/aws-lambda',
-    'esbuild',
-    'pre-commit',
-  ],
-  deps: [
-    'aws-sdk',
-  ],
-  bundledDeps: [
-    'aws-sdk',
-  ],
+  devDeps: ['@types/aws-lambda', 'esbuild', 'pre-commit'],
+  deps: ['aws-sdk'],
+  bundledDeps: ['aws-sdk'],
 
   // jsii publishing
 
