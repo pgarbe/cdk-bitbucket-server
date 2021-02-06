@@ -11,6 +11,7 @@ const project = new AwsCdkConstructLibrary({
   keywords: ['cdk', 'aws-cdk', 'construct', 'aws', 'pgarbe', 'bitbucket', 'bitbucket server'],
   license: 'MIT',
   releaseEveryCommit: false,
+  defaultReleaseBranch: 'main',
 
   catalog: {
     twitter: 'pgarbe',
