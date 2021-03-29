@@ -2,7 +2,7 @@
   "dependencies": [
     {
       "name": "@aws-cdk/assert",
-      "version": "^1.83.0",
+      "version": "^1.95.1",
       "type": "build"
     },
     {
@@ -20,12 +20,10 @@
     },
     {
       "name": "@typescript-eslint/eslint-plugin",
-      "version": "^4.3.0",
       "type": "build"
     },
     {
       "name": "@typescript-eslint/parser",
-      "version": "^4.3.0",
       "type": "build"
     },
     {
@@ -83,12 +81,12 @@
     },
     {
       "name": "projen",
-      "version": "^0.16.2",
+      "version": "^0.17.18",
       "type": "build"
     },
     {
       "name": "standard-version",
-      "version": "^9.0.0",
+      "version": "^9",
       "type": "build"
     },
     {
@@ -97,7 +95,6 @@
     },
     {
       "name": "typescript",
-      "version": "^3.9.5",
       "type": "build"
     },
     {
@@ -106,42 +103,42 @@
     },
     {
       "name": "@aws-cdk/aws-iam",
-      "version": "^1.83.0",
+      "version": "^1.95.1",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/aws-lambda-nodejs",
-      "version": "^1.83.0",
+      "version": "^1.95.1",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/aws-lambda",
-      "version": "^1.83.0",
+      "version": "^1.95.1",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/aws-secretsmanager",
-      "version": "^1.83.0",
+      "version": "^1.95.1",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/aws-sns-subscriptions",
-      "version": "^1.83.0",
+      "version": "^1.95.1",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/aws-ssm",
-      "version": "^1.83.0",
+      "version": "^1.95.1",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/core",
-      "version": "^1.83.0",
+      "version": "^1.95.1",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/custom-resources",
-      "version": "^1.83.0",
+      "version": "^1.95.1",
       "type": "peer"
     },
     {
@@ -151,42 +148,42 @@
     },
     {
       "name": "@aws-cdk/aws-iam",
-      "version": "^1.83.0",
+      "version": "^1.95.1",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-lambda-nodejs",
-      "version": "^1.83.0",
+      "version": "^1.95.1",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-lambda",
-      "version": "^1.83.0",
+      "version": "^1.95.1",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-secretsmanager",
-      "version": "^1.83.0",
+      "version": "^1.95.1",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-sns-subscriptions",
-      "version": "^1.83.0",
+      "version": "^1.95.1",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-ssm",
-      "version": "^1.83.0",
+      "version": "^1.95.1",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/core",
-      "version": "^1.83.0",
+      "version": "^1.95.1",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/custom-resources",
-      "version": "^1.83.0",
+      "version": "^1.95.1",
       "type": "runtime"
     },
     {

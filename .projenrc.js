@@ -1,6 +1,6 @@
 const { AwsCdkConstructLibrary } = require('projen');
 
-const LAST_AWSCDK_VERSION = '1.83.0';
+const LAST_AWSCDK_VERSION = '1.95.1';
 
 const project = new AwsCdkConstructLibrary({
   name: '@pgarbe/cdk-bitbucket-server',
