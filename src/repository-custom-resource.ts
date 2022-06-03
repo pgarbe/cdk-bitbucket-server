@@ -1,8 +1,9 @@
 import * as path from 'path';
-import * as iam from '@aws-cdk/aws-iam';
-import * as lambda from '@aws-cdk/aws-lambda';
-import * as cdk from '@aws-cdk/core';
-import * as cr from '@aws-cdk/custom-resources';
+import * as cdk from 'aws-cdk-lib';
+import * as iam from 'aws-cdk-lib/aws-iam';
+import * as lambda from 'aws-cdk-lib/aws-lambda';
+import * as cr from 'aws-cdk-lib/custom-resources';
+import { Construct } from 'constructs';
 
 /**
  * Props of BitBucketRepoCustomResource
@@ -25,7 +26,7 @@ export interface BitBucketRepoCustomResourceProps {
 /**
  * Custom Resource provider to create a BitBucket repository.
  */
-export class BitBucketRepoCustomResource extends cdk.Construct implements iam.IGrantable {
+export class BitBucketRepoCustomResource extends Construct implements iam.IGrantable {
   /**
    * The service token to be used in custom resources.
    */
@@ -35,7 +36,7 @@ export class BitBucketRepoCustomResource extends cdk.Construct implements iam.IG
    */
   readonly grantPrincipal: iam.IPrincipal;
 
-  constructor(scope: cdk.Construct, id: string, props: BitBucketRepoCustomResourceProps) {
+  constructor(scope: Construct, id: string, props: BitBucketRepoCustomResourceProps) {
     super(scope, id);
 
     const l = new lambda.SingletonFunction(this, `${id}-lambda`, {

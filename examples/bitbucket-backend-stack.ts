@@ -1,13 +1,13 @@
-import * as cdk from '@aws-cdk/core';
-// import * as lambda from '@aws-cdk/aws-lambda';
-// import * as iam from '@aws-cdk/aws-iam';
-import * as ssm from '@aws-cdk/aws-ssm';
-// import * as sns from '@aws-cdk/aws-sns';
-// import * as subs from '@aws-cdk/aws-sns-subscriptions';
+import * as cdk from 'aws-cdk-lib';
+// import * as lambda from 'aws-cdk-lib/aws-lambda';
+// import * as iam from 'aws-cdk-lib/aws-iam';
+import * as ssm from 'aws-cdk-lib/aws-ssm';
+// import * as sns from 'aws-cdk-lib/aws-sns';
+// import * as subs from 'aws-cdk-lib/aws-sns-subscriptions';
 import { BitBucketRepoCustomResource } from '../src/index';
 
 export class BitBucketBackendStack extends cdk.Stack {
-  constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
+  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
     const host = ssm.StringParameter.fromStringParameterAttributes(this, 'bitbuckethost', {

@@ -1,4 +1,5 @@
-import * as cdk from '@aws-cdk/core';
+import * as cdk from 'aws-cdk-lib';
+import { Construct } from 'constructs';
 
 /**
  * Props of BitBucketWebHook
@@ -31,8 +32,8 @@ export interface BitBucketWebHookProps {
 /**
  * BitBucket Webhook using {@link webhook-custom-resource#BitBucketWebHookCustomResource | BitBucketWebHookCustomResource}
  */
-export class BitBucketWebHook extends cdk.Construct {
-  constructor(scope: cdk.Construct, id: string, props: BitBucketWebHookProps) {
+export class BitBucketWebHook extends Construct {
+  constructor(scope: Construct, id: string, props: BitBucketWebHookProps) {
     super(scope, id);
 
     new cdk.CustomResource(this, `${id}-cr`, {

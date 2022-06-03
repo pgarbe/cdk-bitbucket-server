@@ -1,8 +1,9 @@
-import * as cdk from '@aws-cdk/core';
+import * as cdk from 'aws-cdk-lib';
 import { BitBucketRepo } from '../src';
+import { Construct } from 'constructs';
 
 export class BitBucketStack extends cdk.Stack {
-  constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
+  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
     const serviceToken = cdk.Fn.importValue('BitBucketRepoServiceToken');

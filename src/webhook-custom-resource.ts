@@ -1,8 +1,9 @@
 import * as path from 'path';
-import * as iam from '@aws-cdk/aws-iam';
-import * as lambda from '@aws-cdk/aws-lambda';
-import * as cdk from '@aws-cdk/core';
-import * as cr from '@aws-cdk/custom-resources';
+import * as cdk from 'aws-cdk-lib';
+import * as iam from 'aws-cdk-lib/aws-iam';
+import * as lambda from 'aws-cdk-lib/aws-lambda';
+import * as cr from 'aws-cdk-lib/custom-resources';
+import { Construct } from 'constructs';
 
 /**
  * Props of BitBucketWebHookCustomResource
@@ -25,7 +26,7 @@ export interface BitBucketWebHookCustomResourceProps {
 /**
  * Custom Resource provider to create a BitBucket Webhook.
  */
-export class BitBucketWebHookCustomResource extends cdk.Construct implements iam.IGrantable {
+export class BitBucketWebHookCustomResource extends Construct implements iam.IGrantable {
   /**
    * The service token to be used in custom resources.
    */
@@ -35,7 +36,7 @@ export class BitBucketWebHookCustomResource extends cdk.Construct implements iam
    */
   readonly grantPrincipal: iam.IPrincipal;
 
-  constructor(scope: cdk.Construct, id: string, props: BitBucketWebHookCustomResourceProps) {
+  constructor(scope: Construct, id: string, props: BitBucketWebHookCustomResourceProps) {
     super(scope, id);
 
     const l = new lambda.SingletonFunction(this, `${id}-lambda`, {

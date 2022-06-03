@@ -1,4 +1,5 @@
-import * as cdk from '@aws-cdk/core';
+import * as cdk from 'aws-cdk-lib';
+import { Construct } from 'constructs';
 
 /**
  * Props of BitBucketProject
@@ -25,8 +26,8 @@ export interface BitBucketProjectProps {
 /**
  * BitBucket project using {@link project-custom-resource#BitBucketProjectCustomResource | BitBucketProjectCustomResource}
  */
-export class BitBucketProject extends cdk.Construct {
-  constructor(scope: cdk.Construct, id: string, props: BitBucketProjectProps) {
+export class BitBucketProject extends Construct {
+  constructor(scope: Construct, id: string, props: BitBucketProjectProps) {
     super(scope, id);
 
     new cdk.CustomResource(this, `${id}-cr`, {
