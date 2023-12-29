@@ -21,6 +21,7 @@ const project = new pj.awscdk.AwsCdkConstructLibrary({
   projenrcTs: true,
   defaultReleaseBranch: 'main',
 
+  jsiiVersion: '~5.0.0',
   cdkVersion: LAST_AWSCDK_VERSION,
   devDeps: ['esbuild', 'pre-commit'],
   deps: ['aws-sdk', '@types/aws-lambda'],

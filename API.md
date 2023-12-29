@@ -41,7 +41,7 @@ git push
 
 ### BitBucketProject <a name="BitBucketProject" id="@pgarbe/cdk-bitbucket-server.BitBucketProject"></a>
 
-BitBucket project using {@link project-custom-resource#BitBucketProjectCustomResource | BitBucketProjectCustomResource}.
+BitBucket project using {@link project-custom-resource#BitBucketProjectCustomResource BitBucketProjectCustomResource}.
 
 #### Initializers <a name="Initializers" id="@pgarbe/cdk-bitbucket-server.BitBucketProject.Initializer"></a>
 
@@ -271,7 +271,7 @@ The service token to be used in custom resources.
 
 ### BitBucketRepo <a name="BitBucketRepo" id="@pgarbe/cdk-bitbucket-server.BitBucketRepo"></a>
 
-BitBucket repository using {@link repository-custom-resource#BitBucketRepoCustomResource | BitBucketRepoCustomResource}.
+BitBucket repository using {@link repository-custom-resource#BitBucketRepoCustomResource BitBucketRepoCustomResource}.
 
 #### Initializers <a name="Initializers" id="@pgarbe/cdk-bitbucket-server.BitBucketRepo.Initializer"></a>
 
@@ -501,7 +501,7 @@ The service token to be used in custom resources.
 
 ### BitBucketWebHook <a name="BitBucketWebHook" id="@pgarbe/cdk-bitbucket-server.BitBucketWebHook"></a>
 
-BitBucket Webhook using {@link webhook-custom-resource#BitBucketWebHookCustomResource | BitBucketWebHookCustomResource}.
+BitBucket Webhook using {@link webhook-custom-resource#BitBucketWebHookCustomResource BitBucketWebHookCustomResource}.
 
 #### Initializers <a name="Initializers" id="@pgarbe/cdk-bitbucket-server.BitBucketWebHook.Initializer"></a>
 
@@ -808,7 +808,7 @@ const bitBucketProjectProps: BitBucketProjectProps = { ... }
 | <code><a href="#@pgarbe/cdk-bitbucket-server.BitBucketProjectProps.property.description">description</a></code> | <code>string</code> | Description of the project. |
 | <code><a href="#@pgarbe/cdk-bitbucket-server.BitBucketProjectProps.property.key">key</a></code> | <code>string</code> | Key of the project. |
 | <code><a href="#@pgarbe/cdk-bitbucket-server.BitBucketProjectProps.property.name">name</a></code> | <code>string</code> | Name of the project. |
-| <code><a href="#@pgarbe/cdk-bitbucket-server.BitBucketProjectProps.property.serviceToken">serviceToken</a></code> | <code>string</code> | Token returned by {@link project-custom-resource#BitBucketProjectCustomResource \| BitBucketProjectCustomResource}. |
+| <code><a href="#@pgarbe/cdk-bitbucket-server.BitBucketProjectProps.property.serviceToken">serviceToken</a></code> | <code>string</code> | Token returned by {@link project-custom-resource#BitBucketProjectCustomResource BitBucketProjectCustomResource}. |
 
 ---
 
@@ -856,7 +856,7 @@ public readonly serviceToken: string;
 
 - *Type:* string
 
-Token returned by {@link project-custom-resource#BitBucketProjectCustomResource | BitBucketProjectCustomResource}.
+Token returned by {@link project-custom-resource#BitBucketProjectCustomResource BitBucketProjectCustomResource}.
 
 ---
 
@@ -936,7 +936,7 @@ const bitBucketRepoProps: BitBucketRepoProps = { ... }
 | --- | --- | --- |
 | <code><a href="#@pgarbe/cdk-bitbucket-server.BitBucketRepoProps.property.projectName">projectName</a></code> | <code>string</code> | Name of the project. |
 | <code><a href="#@pgarbe/cdk-bitbucket-server.BitBucketRepoProps.property.repositorySlug">repositorySlug</a></code> | <code>string</code> | Slug of the repository. |
-| <code><a href="#@pgarbe/cdk-bitbucket-server.BitBucketRepoProps.property.serviceToken">serviceToken</a></code> | <code>string</code> | Token returned by {@link repository-custom-resource#BitBucketRepoCustomResource \| BitBucketRepoCustomResource}. |
+| <code><a href="#@pgarbe/cdk-bitbucket-server.BitBucketRepoProps.property.serviceToken">serviceToken</a></code> | <code>string</code> | Token returned by {@link repository-custom-resource#BitBucketRepoCustomResource BitBucketRepoCustomResource}. |
 
 ---
 
@@ -972,7 +972,7 @@ public readonly serviceToken: string;
 
 - *Type:* string
 
-Token returned by {@link repository-custom-resource#BitBucketRepoCustomResource | BitBucketRepoCustomResource}.
+Token returned by {@link repository-custom-resource#BitBucketRepoCustomResource BitBucketRepoCustomResource}.
 
 ---
 
@@ -1053,7 +1053,7 @@ const bitBucketWebHookProps: BitBucketWebHookProps = { ... }
 | <code><a href="#@pgarbe/cdk-bitbucket-server.BitBucketWebHookProps.property.events">events</a></code> | <code>string[]</code> | List of events that trigger the webhook. |
 | <code><a href="#@pgarbe/cdk-bitbucket-server.BitBucketWebHookProps.property.name">name</a></code> | <code>string</code> | Name of the webhook. |
 | <code><a href="#@pgarbe/cdk-bitbucket-server.BitBucketWebHookProps.property.secret">secret</a></code> | <code>string</code> | Secret of the webhook. |
-| <code><a href="#@pgarbe/cdk-bitbucket-server.BitBucketWebHookProps.property.serviceToken">serviceToken</a></code> | <code>string</code> | Token returned by {@link webhook-custom-resource#BitBucketWebHookCustomResource \| BitBucketWebHookCustomResource}. |
+| <code><a href="#@pgarbe/cdk-bitbucket-server.BitBucketWebHookProps.property.serviceToken">serviceToken</a></code> | <code>string</code> | Token returned by {@link webhook-custom-resource#BitBucketWebHookCustomResource BitBucketWebHookCustomResource}. |
 | <code><a href="#@pgarbe/cdk-bitbucket-server.BitBucketWebHookProps.property.url">url</a></code> | <code>string</code> | URL that is called by the webhook. |
 
 ---
@@ -1102,7 +1102,7 @@ public readonly serviceToken: string;
 
 - *Type:* string
 
-Token returned by {@link webhook-custom-resource#BitBucketWebHookCustomResource | BitBucketWebHookCustomResource}.
+Token returned by {@link webhook-custom-resource#BitBucketWebHookCustomResource BitBucketWebHookCustomResource}.
 
 ---
 

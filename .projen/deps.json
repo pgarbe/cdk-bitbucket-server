@@ -2,40 +2,25 @@
   "dependencies": [
     {
       "name": "@types/jest",
-      "version": "^27",
       "type": "build"
     },
     {
       "name": "@types/node",
-      "version": "^16",
+      "version": "^18",
       "type": "build"
     },
     {
       "name": "@typescript-eslint/eslint-plugin",
-      "version": "^5",
+      "version": "^6",
       "type": "build"
     },
     {
       "name": "@typescript-eslint/parser",
-      "version": "^5",
-      "type": "build"
-    },
-    {
-      "name": "aws-cdk-lib",
-      "version": "2.26.0",
-      "type": "build"
-    },
-    {
-      "name": "constructs",
-      "version": "10.0.5",
+      "version": "^6",
       "type": "build"
     },
     {
       "name": "esbuild",
-      "type": "build"
-    },
-    {
-      "name": "eslint-import-resolver-node",
       "type": "build"
     },
     {
@@ -52,13 +37,12 @@
       "type": "build"
     },
     {
-      "name": "jest-junit",
-      "version": "^15",
+      "name": "jest",
       "type": "build"
     },
     {
-      "name": "jest",
-      "version": "^27",
+      "name": "jest-junit",
+      "version": "^15",
       "type": "build"
     },
     {
@@ -74,13 +58,13 @@
       "type": "build"
     },
     {
-      "name": "jsii",
-      "version": "1.x",
+      "name": "jsii-rosetta",
+      "version": "~5.0.0",
       "type": "build"
     },
     {
-      "name": "npm-check-updates",
-      "version": "^16",
+      "name": "jsii",
+      "version": "~5.0.0",
       "type": "build"
     },
     {
@@ -98,7 +82,6 @@
     },
     {
       "name": "ts-jest",
-      "version": "^27",
       "type": "build"
     },
     {
@@ -116,16 +99,6 @@
     {
       "name": "aws-sdk",
       "type": "bundled"
-    },
-    {
-      "name": "@types/babel__traverse",
-      "version": "7.18.2",
-      "type": "override"
-    },
-    {
-      "name": "@types/prettier",
-      "version": "2.6.0",
-      "type": "override"
     },
     {
       "name": "aws-cdk-lib",
