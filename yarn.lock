@@ -1318,9 +1318,9 @@ aws-cdk-lib@2.26.0:
     yaml "1.10.2"
 
 aws-sdk@^2.1527.0:
-  version "2.1527.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1527.0.tgz#c783f36a77323c6bc97c5252eb7ef3741385278f"
-  integrity sha512-9jW5urAj/mEJjj+pTbsFTRatx0P133g9A61aHwV9RFQsvbY58O8I/qEKEuapHwsKt8YnAoOEbQW4/842lI0qxw==
+  version "2.1541.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1541.0.tgz#7cc269e7f2435c39fb6fe9357b75599e2554a88f"
+  integrity sha512-+xS/Gq/+j/RKb3A6SHXn6tOCaog1O3troklpVxxNaqVNnq+zlwjFderGNzR6S4ftfNG7sKMUP++Znsqte8GMaw==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
