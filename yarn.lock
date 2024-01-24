@@ -1318,9 +1318,9 @@ aws-cdk-lib@2.26.0:
     yaml "1.10.2"
 
 aws-sdk@^2.1527.0:
-  version "2.1527.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1527.0.tgz#c783f36a77323c6bc97c5252eb7ef3741385278f"
-  integrity sha512-9jW5urAj/mEJjj+pTbsFTRatx0P133g9A61aHwV9RFQsvbY58O8I/qEKEuapHwsKt8YnAoOEbQW4/842lI0qxw==
+  version "2.1543.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1543.0.tgz#38f6e3131dcdfcfdc4736e29e5c216c37d4dc38d"
+  integrity sha512-sC8VwfdlauX7AYYm6Ed4SkONjt7cLr63AdkSL0MS+lwoy1fJwVRb2Kwylv+an1uAdQavRltWnEg2LVo2jzRQuA==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
@@ -1331,7 +1331,7 @@ aws-sdk@^2.1527.0:
     url "0.10.3"
     util "^0.12.4"
     uuid "8.0.0"
-    xml2js "0.5.0"
+    xml2js "0.6.2"
 
 babel-jest@^29.7.0:
   version "29.7.0"
@@ -5331,10 +5331,10 @@ write-file-atomic@^4.0.2:
     imurmurhash "^0.1.4"
     signal-exit "^3.0.7"
 
-xml2js@0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/xml2js/-/xml2js-0.5.0.tgz#d9440631fbb2ed800203fad106f2724f62c493b7"
-  integrity sha512-drPFnkQJik/O+uPKpqSgr22mpuFHqKdbS835iAQrUC73L2F5WkboIRd63ai/2Yg6I1jzifPFKH2NTK+cfglkIA==
+xml2js@0.6.2:
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/xml2js/-/xml2js-0.6.2.tgz#dd0b630083aa09c161e25a4d0901e2b2a929b499"
+  integrity sha512-T4rieHaC1EXcES0Kxxj4JWgaUQHDk+qwHcYOCFHfiwKz7tOVPLq7Hjq9dM1WCMhylqMEfP7hMcOIChvotiZegA==
   dependencies:
     sax ">=0.6.0"
     xmlbuilder "~11.0.0"
