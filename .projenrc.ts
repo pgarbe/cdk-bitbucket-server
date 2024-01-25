@@ -1,6 +1,6 @@
 import * as pj from 'projen';
 
-const LAST_AWSCDK_VERSION = '2.26.0';
+const LAST_AWSCDK_VERSION = '2.123.0';
 
 const project = new pj.awscdk.AwsCdkConstructLibrary({
   name: '@pgarbe/cdk-bitbucket-server',
@@ -21,7 +21,7 @@ const project = new pj.awscdk.AwsCdkConstructLibrary({
   projenrcTs: true,
   defaultReleaseBranch: 'main',
 
-  jsiiVersion: '~5.0.0',
+  jsiiVersion: '~5.x',
   cdkVersion: LAST_AWSCDK_VERSION,
   devDeps: ['esbuild', 'pre-commit'],
   deps: ['aws-sdk', '@types/aws-lambda'],
