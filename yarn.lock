@@ -3536,9 +3536,9 @@ jsii-diff@^1.94.0:
     yargs "^16.2.0"
 
 jsii-docgen@^10:
-  version "10.3.10"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-10.3.10.tgz#556d2049d1d2271e14b29ebc54d6f87a98ec6d49"
-  integrity sha512-K5ZnRsXW052l0S/MUeHJG6/dTrhs7LzL5rksCFuLEEKWgaobh1yrWPEpJpkbbxuUsFdF2HVS0q9rt1XYBKhlpA==
+  version "10.3.16"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-10.3.16.tgz#60e2a21e8ea3cb7f635bff905d2d0b3413408681"
+  integrity sha512-7FbgDK0+1KKYmLsLwfBWAKDt6qBwZNUNeWbijfODAKOwraoHS5aMdlfByFXQk5TwI7i1WdZqUB1Rkl3lUHGC9g==
   dependencies:
     "@jsii/spec" "^1.94.0"
     case "^1.6.3"
@@ -3546,7 +3546,7 @@ jsii-docgen@^10:
     glob "^8.1.0"
     glob-promise "^6.0.5"
     jsii-reflect "^1.94.0"
-    semver "^7.5.4"
+    semver "^7.6.0"
     yargs "^16.2.0"
 
 jsii-pacmak@^1.94.0:
@@ -4598,10 +4598,10 @@ semver@^6.0.0, semver@^6.3.0, semver@^6.3.1:
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.1.tgz#556d2ef8689146e46dcea4bfdd095f3434dffcb4"
   integrity sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==
 
-semver@^7.1.1, semver@^7.3.2, semver@^7.3.4, semver@^7.5.3, semver@^7.5.4:
-  version "7.5.4"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-7.5.4.tgz#483986ec4ed38e1c6c48c34894a9182dbff68a6e"
-  integrity sha512-1bCSESV6Pv+i21Hvpxp3Dx+pSD8lIPt8uVjRrxAUt/nbswYc+tK6Y2btiULjd4+fnq15PX+nqQDC7Oft7WkwcA==
+semver@^7.1.1, semver@^7.3.2, semver@^7.3.4, semver@^7.5.3, semver@^7.5.4, semver@^7.6.0:
+  version "7.6.0"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.6.0.tgz#1a46a4db4bffcccd97b743b5005c8325f23d4e2d"
+  integrity sha512-EnwXhrlwXMk9gKu5/flx5sv/an57AkRplG3hTK68W7FRDN+k+OWBj65M7719OkA82XLBxrcX0KSHj+X5COhOVg==
   dependencies:
     lru-cache "^6.0.0"
 
