@@ -858,9 +858,9 @@
   integrity sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==
 
 "@types/aws-lambda@^8.10.134":
-  version "8.10.134"
-  resolved "https://registry.yarnpkg.com/@types/aws-lambda/-/aws-lambda-8.10.134.tgz#8f65d86736839889194f7892b7bec6b8a7ec6fc3"
-  integrity sha512-cfv422ivDMO+EeA3N4YcshbTHBL+5lLXe+Uz+4HXvIcsCuWvqNFpOs28ZprL8NA3qRCzt95ETiNAJDn4IcC/PA==
+  version "8.10.135"
+  resolved "https://registry.yarnpkg.com/@types/aws-lambda/-/aws-lambda-8.10.135.tgz#c2f79ca42de77dbd1c7db35704895237c0da1e77"
+  integrity sha512-kD3aDbS5la1LcS89a4bJTLVSJI5euO2fx3euZTge7SbArH7+kcoLS+lK87cdI5GCEfiBQSio5gz546N0FhMmjg==
 
 "@types/babel__core@^7.1.14":
   version "7.20.5"
