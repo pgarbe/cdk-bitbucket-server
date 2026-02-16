@@ -13,13 +13,10 @@ const project = new pj.awscdk.AwsCdkConstructLibrary({
   keywords: ['cdk', 'aws-cdk', 'construct', 'aws', 'pgarbe', 'bitbucket', 'bitbucket server'],
   license: 'MIT',
 
-  catalog: {
-    twitter: 'pgarbe',
-  },
-
   // creates PRs for projen upgrades
   projenrcTs: true,
   defaultReleaseBranch: 'main',
+  npmTrustedPublishing: true,
 
   jsiiVersion: '~5.x',
   cdkVersion: LAST_AWSCDK_VERSION,
