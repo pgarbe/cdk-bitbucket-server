@@ -45,6 +45,7 @@ new BitBucketProject(scope: Construct, id: string, props: BitBucketProjectProps)
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@pgarbe/cdk-bitbucket-server.BitBucketProject.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@pgarbe/cdk-bitbucket-server.BitBucketProject.with">with</a></code> | Applies one or more mixins to this construct. |
 
 ---
 
@@ -55,6 +56,27 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@pgarbe/cdk-bitbucket-server.BitBucketProject.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@pgarbe/cdk-bitbucket-server.BitBucketProject.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+The mixins to apply.
+
+---
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
 
@@ -162,6 +184,7 @@ new BitBucketProjectCustomResource(scope: Construct, id: string, props: BitBucke
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@pgarbe/cdk-bitbucket-server.BitBucketProjectCustomResource.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@pgarbe/cdk-bitbucket-server.BitBucketProjectCustomResource.with">with</a></code> | Applies one or more mixins to this construct. |
 
 ---
 
@@ -172,6 +195,27 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@pgarbe/cdk-bitbucket-server.BitBucketProjectCustomResource.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@pgarbe/cdk-bitbucket-server.BitBucketProjectCustomResource.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+The mixins to apply.
+
+---
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
 
@@ -303,6 +347,7 @@ new BitBucketRepo(scope: Construct, id: string, props: BitBucketRepoProps)
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@pgarbe/cdk-bitbucket-server.BitBucketRepo.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@pgarbe/cdk-bitbucket-server.BitBucketRepo.with">with</a></code> | Applies one or more mixins to this construct. |
 
 ---
 
@@ -313,6 +358,27 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@pgarbe/cdk-bitbucket-server.BitBucketRepo.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@pgarbe/cdk-bitbucket-server.BitBucketRepo.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+The mixins to apply.
+
+---
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
 
@@ -420,6 +486,7 @@ new BitBucketRepoCustomResource(scope: Construct, id: string, props: BitBucketRe
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@pgarbe/cdk-bitbucket-server.BitBucketRepoCustomResource.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@pgarbe/cdk-bitbucket-server.BitBucketRepoCustomResource.with">with</a></code> | Applies one or more mixins to this construct. |
 
 ---
 
@@ -430,6 +497,27 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@pgarbe/cdk-bitbucket-server.BitBucketRepoCustomResource.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@pgarbe/cdk-bitbucket-server.BitBucketRepoCustomResource.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+The mixins to apply.
+
+---
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
 
@@ -561,6 +649,7 @@ new BitBucketWebHook(scope: Construct, id: string, props: BitBucketWebHookProps)
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@pgarbe/cdk-bitbucket-server.BitBucketWebHook.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@pgarbe/cdk-bitbucket-server.BitBucketWebHook.with">with</a></code> | Applies one or more mixins to this construct. |
 
 ---
 
@@ -571,6 +660,27 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@pgarbe/cdk-bitbucket-server.BitBucketWebHook.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@pgarbe/cdk-bitbucket-server.BitBucketWebHook.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+The mixins to apply.
+
+---
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
 
@@ -678,6 +788,7 @@ new BitBucketWebHookCustomResource(scope: Construct, id: string, props: BitBucke
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@pgarbe/cdk-bitbucket-server.BitBucketWebHookCustomResource.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@pgarbe/cdk-bitbucket-server.BitBucketWebHookCustomResource.with">with</a></code> | Applies one or more mixins to this construct. |
 
 ---
 
@@ -688,6 +799,27 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@pgarbe/cdk-bitbucket-server.BitBucketWebHookCustomResource.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@pgarbe/cdk-bitbucket-server.BitBucketWebHookCustomResource.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+The mixins to apply.
+
+---
 
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
 
